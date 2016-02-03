@@ -1431,12 +1431,11 @@ local function run(msg, matches)
           msgr = get_message(msg.reply_id, setowner_by_reply, false)
       end
     end
-    if matches[1] == 'mega' then
-    	if matches[2] == 'satan' then
+    if matches[1] == 'mega' and  matches[2] == 'satan' then
     	        return "W_SaTaN_W \n Advanced Bot Base On Seed\n@WilSoN_DeVeLoPeR[DeVeLoPeR] \n#Open_Source\n\n[W_SaTaN](Htps://telegra.me/W_SaTaN_W)"
             end
     end
-    if macthes[1] == 'megasatan' then
+    if matches[1] == 'megasatan' then
     	return "W_SaTaN_W \n Advanced Bot Base On Seed\n@WilSoN_DeVeLoPeR[DeVeLoPeR] \n#Open_Source\n\n[W_SaTaN](Htps://telegra.me/W_SaTaN_W)"
     end
     if matches[1] == 'owner' then
