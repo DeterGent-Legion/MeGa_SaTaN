@@ -165,7 +165,7 @@ local function run(msg, matches)
   end
 
   -- Enable a plugin
-  if matches[1] == '+'  and is_sudo(msg) then --after changed to moderator mode, set only sudo
+  if matches[1] == '+' and is_sudo(msg) then --after changed to moderator mode, set only sudo
     local plugin_name = matches[2]
     print("enable: "..matches[2])
     return enable_plugin(plugin_name)
@@ -202,10 +202,10 @@ return {
           "!plugins enable [plugin] chat : enable plugin only this chat.",
           },
       sudo = {
-          "!plugins = : list all plugins.",
-          "!plugins + [plugin] : enable plugin.",
-          "!plugins - [plugin] : disable plugin.",
-          "!plugins * : reloads all plugins." },
+          "!plugins : list all plugins.",
+          "!plugins enable [plugin] : enable plugin.",
+          "!plugins disable [plugin] : disable plugin.",
+          "!plugins reload : reloads all plugins." },
           },
   patterns = {
     "^!plugins$",
