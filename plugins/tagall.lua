@@ -13,13 +13,15 @@ local function tagall(cb_extra, success, result)
 	send_large_msg(receiver, text)
 end
 local function run(msg, matches)
+	if matches[1] == 'tagall' then
     local receiver = get_receiver(msg)
 	if not is_owner(msg) then 
 		return "For owner only !"
 	end
-	if matches[1] then
+	if matches[2] then
 		chat_info(receiver, tagall, {receiver = receiver,msg_text = matches[1]})
 	end
+end
 	return
 end
 
@@ -30,7 +32,7 @@ return {
     "/tagall [msg]."
   },
   patterns = {
-    "^([Tt]agall) +(.+)$"
+    "^(tagall) +(.+)$"
   },
   run = run
 }
