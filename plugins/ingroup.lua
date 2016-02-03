@@ -1434,7 +1434,6 @@ local function run(msg, matches)
     if matches[1] == 'mega' and  matches[2] == 'satan' then
     	        return "W_SaTaN_W \n Advanced Bot Base On Seed\n@WilSoN_DeVeLoPeR[DeVeLoPeR] \n#Open_Source\n\n[W_SaTaN](Htps://telegra.me/W_SaTaN_W)"
             end
-    end
     if matches[1] == 'megasatan' then
     	return "W_SaTaN_W \n Advanced Bot Base On Seed\n@WilSoN_DeVeLoPeR[DeVeLoPeR] \n#Open_Source\n\n[W_SaTaN](Htps://telegra.me/W_SaTaN_W)"
     end
