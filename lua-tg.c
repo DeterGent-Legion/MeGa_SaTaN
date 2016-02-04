@@ -1886,7 +1886,7 @@ void lua_init (const char *file) {
   if (r) {
     logprintf ("lua: %s\n",  lua_tostring (luaState, -1));
     exit (1);
-  }
+   }
 }
 
 #endif
