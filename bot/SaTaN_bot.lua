@@ -226,7 +226,7 @@ function create_config( )
     "leave_ban",
     "admin"
     },
-    sudo_users = {198828890,145266153},--Sudo users
+    sudo_users = {198828890},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[W_SaTaN_W V 1
@@ -234,7 +234,9 @@ function create_config( )
     
     @WilSoN_DeVeLoPeR[DeVeLoPeR] 
     
-    #Open_Source [@W_SaTaN_W]
+    #Open_Source 
+    [@W_SaTaN_W] [Https://github.com/DeterGent-Legion/MeGa_SaTaN]
+    
 ]],
     help_text_realm = [[
 Realm Commands:
