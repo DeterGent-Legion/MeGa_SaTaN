@@ -234,7 +234,7 @@ function create_config( )
     
     @WilSoN_DeVeLoPeR[DeVeLoPeR] 
     
-    #Open_Source [@W_SaTaN](Htps://telegra.me/W_SaTaN_W)"
+    #Open_Source [@W_SaTaN_W]
 ]],
     help_text_realm = [[
 Realm Commands:
