@@ -13,7 +13,10 @@ end
     return "Admin Added To: "..string.gsub(msg.to.print_name, "_", " ")..'['..msg.to.id..']'
 end
 return {
-    patterns ={
+    usage = {
+      "Addadmin: Add Sudo In Group."
+      },
+    patterns = {
         "^([Aa]ddadmin)$"
         },
     run = run
