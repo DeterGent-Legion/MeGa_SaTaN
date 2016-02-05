@@ -171,6 +171,18 @@ local function run(msg,matches)
     return
 end
 return {
+	usage = {
+		"pm: Send Pm To Priavate Chat.",
+		"block: Block User [id].",
+		"unblock: Unblock User [id].",
+		"markread on: Reads Messages agancy Bot.",
+		"markread off: Don't Reads Messages agancy Bot.",
+		"setbotphoto: Set New Photo For Bot Account.",
+		"contactlist: Send A List Of Bot Contacts.",
+		"dialoglist: Send A Dialog Of Chat.",
+		"delcontact: Delete Contact.",
+		"import: Added Bot In Group With Link.",
+		},
   patterns = {
 	"^(pm) (%d+) (.*)$",
 	"^(import) (.*)$",
