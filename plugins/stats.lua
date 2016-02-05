@@ -137,6 +137,13 @@ local function run(msg, matches)
   end
 end
 return {
+	usage = {
+		"stats: Return Stats Group.",
+		"statslist: Return Stats Group.",
+		"stats group [id]: Return Stats Group[id].",
+		"stats megasatan: Return Users And Groups Stats.",
+		"megasatan: Return About Text.",
+		},
   patterns = {
     "^([Ss]tats)$",
     "^([Ss]tatslist)$",
