@@ -18,7 +18,7 @@ do
 
   description = "Feedback",
 
-  usage = "!feedback message",
+  usage = "feedback: Send A Message To Admins.",
   patterns = {
   "^[Ff]eedback (.*)$"
 
