@@ -19,6 +19,10 @@ local function run(msg, matches)
 
 
 return {
+  usage = {
+    "lock leave: Leaving Will Banned.",
+    "unlock leave: No Action Axecute On User If Leaving.",
+    },
   patterns = {
     "^!!tgservice (.*)$"
   },
