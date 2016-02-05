@@ -21,6 +21,10 @@ if msg.to.type == 'chat' then
 end
  end
 return {
+    usage ={
+        "lock adds: If User Send A Link Then Removed From Bot.",
+        "unlock adds: Adds Is Enabled.",
+        },
   patterns = {
     "telegram.me/joinchat/",
         "telegram.me",
