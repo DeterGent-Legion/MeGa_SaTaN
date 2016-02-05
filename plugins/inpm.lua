@@ -77,6 +77,10 @@ end
 end
 
 return {
+	usage ={
+		"chats: Return List Of Groups.",
+		"join [id]: Bot Add You In Groups.",
+		},
     patterns = {
       "^(chats)$",
       "^(chatlist)$",
