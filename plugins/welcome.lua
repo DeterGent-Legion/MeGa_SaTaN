@@ -94,7 +94,7 @@ end
 
 return {
    description = "Welcoming Message",
-   usage = "send message to new member",
+   usage = "Welcome: If Added User Or Delete User Bot Send A Welcome Or GoodBye Message.",
    patterns = {
       "^!!tgservice (chat_add_user)$",
       "^!!tgservice (chat_add_user_link)$",
