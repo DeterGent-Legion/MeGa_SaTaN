@@ -24,6 +24,9 @@ local function run(msg, matches)
 end
 
 return {
+  usage = {
+    "save: Save A Value With Subject.",
+    },
   patterns = {
    "^save ([^%s]+) (.+)$"
   }, 
