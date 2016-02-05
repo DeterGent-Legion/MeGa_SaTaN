@@ -147,6 +147,10 @@ end
 
 
 return {
+  usage = {
+    "all: All Actions In Group.",
+    "all [id]: All Actions From [id].",
+    },
   patterns = {
   "^(all)$",
   "^(all) (%d+)$"
