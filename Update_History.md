@@ -20,7 +20,8 @@ cd MeGa_SaTaN
 chmod +x launch.sh
 ./launch.sh install
 cd tg 
-rm lua-tg.c && cat > lua-tg.c # Paste [lua-tg.c](https://github.com/DeterGent-Legion/MeGa_SaTaN/lua-tg.c)
+rm lua-tg.c && cat > lua-tg.c \n # Paste
+[lua-tg.c](https://github.com/DeterGent-Legion/MeGa_SaTaN/lua-tg.c)
 make && cd .. # For Support Sticker Operation
 ./launch.sh # Enter a phone number & confirmation code.
 ```
