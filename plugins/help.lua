@@ -138,9 +138,9 @@ local function run(msg, matches)
   else
       requester = "user"
   end
-  if matches[1] == "!help" then
+  if matches[1] == "help" then
     return telegram_help()
-  elseif matches[1] == "!help all" then
+  elseif matches[1] == "help all" then
     return help_all(requester)
   else
     local text = ""
