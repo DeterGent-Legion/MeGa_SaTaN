@@ -26,6 +26,10 @@ local function cron()
   antiarabic = {} -- Clear antiarabic table 
 end
 return {
+	usage = {
+		"lock arabic: If Speak Persian Of Arabic, Bot Removed User.",
+		"unlock arabic: Anyone Can Speak Pesrain Or Arabic.",
+		},
   patterns = {
     "([\216-\219][\128-\191])"
     },
