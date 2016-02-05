@@ -816,9 +816,10 @@ local function run(msg, matches)
   end 
 end
 return {
+  usage = {
+    "linkpv: Send Link In Private Chat.",
   patterns = {
-  "^[!/@#$&](linkpv)$",
-  "^([Ll]inkpv)$",
+    "^([Ll]inkpv)$",
   "%[(photo)%]",
   "^!!tgservice (.+)$",
   },
