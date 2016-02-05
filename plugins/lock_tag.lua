@@ -20,6 +20,10 @@ if msg.to.type == 'chat' then
 end
  end
 return {
+	usage = {
+		"lock tag: If User Send A Message With # , @ Then Bot Removed User.",
+		"unlock tag: No Action Execute If User Send Mesage With # , @",
+		},
   patterns = {
     "@",
 	"#"
