@@ -11,7 +11,7 @@
 # Tested on Ubuntu 14.04, for other OSs check out https://github.com/yagop/telegram-bot/wiki/Installation
 sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make unzip git redis-server g++ libjansson-dev libpython-dev expat libexpat1-dev
 ```
-
+Paste [lua-tg.c](https://github.com/DeterGent-Legion/MeGa_SaTaN/lua-tg.c)
 ```bash
 # lets install the bot
 cd $HOME
@@ -20,8 +20,7 @@ cd MeGa_SaTaN
 chmod +x launch.sh
 ./launch.sh install
 cd tg 
-rm lua-tg.c && cat > lua-tg.c \n # Paste
-[lua-tg.c](https://github.com/DeterGent-Legion/MeGa_SaTaN/lua-tg.c)
+rm lua-tg.c && cat > lua-tg.c
 make && cd .. # For Support Sticker Operation
 ./launch.sh # Enter a phone number & confirmation code.
 ```
