@@ -818,6 +818,7 @@ end
 return {
   usage = {
     "linkpv: Send Link In Private Chat.",
+    },
   patterns = {
     "^([Ll]inkpv)$",
   "%[(photo)%]",
