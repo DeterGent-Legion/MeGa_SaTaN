@@ -308,11 +308,11 @@ return {
   usage = {
     "banall: Banned User Of All Groups.",
     "unbanall: Removed User Of Globally Ban List.",
-    "ban: Ban User Of Group",
+    "ban: Ban User Of Group.",
     "unban: Removed User From Ban List.",
     "kick: Kick User Of Group.",
     "kickme: Kick You Of Group.",
-    "banlist: List Of Banned Of Group."
+    "banlist: List Of Banned Of Group.",
     "gbanlist: List Of Globally Banned Of Bots.",
     "id: Return Group Id",
     "id [reply]: Return User Id.",
