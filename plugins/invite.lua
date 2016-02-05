@@ -32,7 +32,11 @@ function run(msg, matches)
   res_user(username,  callbackres, cbres_extra)
 end
 return {
+	usage = {
+		"invite [Username]: Invite User To Group[Sudo].",
+		},
     patterns = {
+    	
       "^invite (.*)$"
     },
     run = run
