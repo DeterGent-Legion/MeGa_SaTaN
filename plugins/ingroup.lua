@@ -230,7 +230,7 @@ local function show_group_settingsmod(msg, data, target)
     if data[tostring(msg.to.id)]['settings']['lock_leave'] then
         lock_leave = data[tostring(msg.to.id)]['settings']['lock_leave']
         end
-local lock_sticker = "no"
+local lock_sticker = "ok"
     if data[tostring(msg.to.id)]['settings']['sticker'] then
         lock_sticker = data[tostring(msg.to.id)]['settings']['sticker']
         end
@@ -304,10 +304,10 @@ local function lock_group_sticker(msg, data, target)
     return "For moderators only!"
   end
   local group_sticker_lock = data[tostring(target)]['settings']['sticker']
-  if group_sticker_lock == 'yes' then
+  if group_sticker_lock == 'kick' then
     return 'Sticker protection is already enabled!'
   else
-    data[tostring(target)]['settings']['sticker'] = 'yes'
+    data[tostring(target)]['settings']['sticker'] = 'kick'
     save_data(_config.moderation.data, data)
     return 'Sticker protection has been enabled!'
   end
@@ -318,10 +318,10 @@ local function unlock_group_sticker(msg, data, target)
     return "For moderators only!"
   end
   local group_sticker_lock = data[tostring(target)]['settings']['sticker']
-  if group_sticker_lock == 'no' then
+  if group_sticker_lock == 'ok' then
     return 'Sticker protection is already disabled!'
   else
-    data[tostring(target)]['settings']['sticker'] = 'no'
+    data[tostring(target)]['settings']['sticker'] = 'ok'
     save_data(_config.moderation.data, data)
     return 'Sticker protection has been disabled!'
   end
@@ -1372,15 +1372,15 @@ local function run(msg, matches)
       savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested group settings ")
       return show_group_settingsmod(msg, data, target)
     end	
-    if msg.media and msg.media.caption == 'sticker.webp' and not is_momod(msg) then
+     if msg.media and msg.media.caption == 'sticker.webp' and not is_momod(msg) then
       local user_id = msg.from.id
       local chat_id = msg.to.id
       local sticker_hash = 'mer_sticker:'..chat_id..':'..user_id
       local is_sticker_offender = redis:get(sticker_hash)
-    if settings.sticker == 'yes' then
+    if settings.sticker == 'kick' then
         chat_del_user(receiver, 'user#id'..user_id, ok_cb, true)
         return 'Sticker Protection enabled! Dont Send Sticker!'
-      elseif settings.sticker == 'no' then
+      elseif settings.sticker == 'ok' then
         return nil
       end
     end
@@ -1642,6 +1642,9 @@ return {
   "^(kickinactive) (%d+)$",
   "%[(photo)%]",
   "^!!tgservice (.+)$",
+  "%[(audio)%]",
+  "%[(document)%]",
+  "%[(video)%]",
   },
   run = run
 }
