@@ -4,7 +4,7 @@ local data = load_data(_config.moderation.data)
         local user_id = msg.from.id
         if data[tostring(msg.to.id)] then
         if data[tostring(msg.to.id)]['settings'] then
-        if data[tostring(msg.to.id)]['settings']['lock_link'] == 'yes' then
+        if data[tostring(msg.to.id)]['settings']['lock_join'] == 'yes' then
       kick_user(user_id, msg.to.id)
     end
    end
