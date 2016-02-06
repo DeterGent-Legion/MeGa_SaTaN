@@ -1372,7 +1372,18 @@ local function run(msg, matches)
       savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested group settings ")
       return show_group_settingsmod(msg, data, target)
     end	
-
+    if msg.media and msg.media.caption == 'sticker.webp' and not is_momod(msg) then
+      local user_id = msg.from.id
+      local chat_id = msg.to.id
+      local sticker_hash = 'mer_sticker:'..chat_id..':'..user_id
+      local is_sticker_offender = redis:get(sticker_hash)
+    if settings.sticker == 'kick' then
+        chat_del_user(receiver, 'user#id'..user_id, ok_cb, true)
+        return 'Sticker Protection enabled! Dont Send Sticker!'
+      elseif settings.sticker == 'ok' then
+        return nil
+      end
+    end
   --[[if matches[1] == 'public' then
     local target = msg.to.id
     if matches[2] == 'yes' then
