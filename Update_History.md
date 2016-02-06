@@ -4,6 +4,10 @@
 
 ## Added [Ultimate Help](https://github.com/DeterGent-Legion/MeGa_SaTaN/plugins/help.lua) 
 
+### Added Lock All & Unlock All & Bugs Fix.
+
+###Added copyright For Set Your Abouts. Don't Change megasatan Please.♥
+
 ### How Can I Install It?
 # Installation 
 
