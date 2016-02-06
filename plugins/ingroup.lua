@@ -1263,6 +1263,23 @@ local function run(msg, matches)
     end
    if matches[1] == 'lock' or matches[1] == 'l' then
       local target = msg.to.id
+      if matches[2] == 'all' then
+      	if not is_momod(msg) then
+      		return ""
+      	end
+      	local safemode ={
+      		lock_group_sticker(msg, data, target),
+      		lock_group_namemod(msg, data, target),
+      		lock_group_membermod(msg, data, target),
+      		lock_group_floodmod(msg, data, target),
+      		lock_group_tag(msg, data, target),
+      		lock_group_badw(msg, data, target),
+      		lock_group_join(msg, data, target),
+      		lock_group_bots(msg, data, target),
+      		lock_group_link(msg, data, target),
+      	}
+      	return safemode
+      end
       if matches[2] == 'sticker' or matches[2] == 's' then
           savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked sticker ")
           return lock_group_sticker(msg, data, target)
@@ -1314,6 +1331,23 @@ local function run(msg, matches)
     end
     if matches[1] == 'unlock' or matches[1] == 'u'  then
       local target = msg.to.id
+      if matches[2] == 'all' then
+      	if not is_momod(msg) then
+      		return ""
+      	end
+      	local de_safemode ={
+      		unlock_group_sticker(msg, data, target),
+      		unlock_group_namemod(msg, data, target),
+      		unlock_group_membermod(msg, data, target),
+      		unlock_group_floodmod(msg, data, target),
+      		unlock_group_tag(msg, data, target),
+      		unlock_group_badw(msg, data, target),
+      		unlock_group_join(msg, data, target),
+      		unlock_group_bots(msg, data, target),
+      		unlock_group_link(msg, data, target),
+      	}
+      	return de_safemode
+      end
       if matches[2] == 'sticker' or matches[2] == 's' then
           savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked sticker ")
           return unlock_group_sticker(msg, data, target)
