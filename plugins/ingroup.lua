@@ -232,7 +232,7 @@ local function show_group_settingsmod(msg, data, target)
         end
 local lock_sticker = "no"
     if data[tostring(msg.to.id)]['settings']['sticker'] then
-        lock_tag = data[tostring(msg.to.id)]['settings']['sticker']
+        lock_sticker = data[tostring(msg.to.id)]['settings']['sticker']
         end
          local settings = data[tostring(target)]['settings']
   local text = "Group settings:\nLock group name : "..settings.lock_name.."\nLock group photo : "..settings.lock_photo.."\nLock group tag : "..lock_tag.."\nLock group member : "..settings.lock_member.."\nLock group english 🗣 : "..lock_eng.."\n Lock group leave : "..lock_leave.."\nLock group bad words : "..lock_badw.."\nLock group links : "..lock_link.."\nLock group join : "..lock_adds.."\nLock group sticker : "..lock_sticker.."\nflood sensitivity : "..NUM_MSG_MAX.."\nBot protection : "..bots_protection--"\nPublic: "..public
@@ -304,10 +304,10 @@ local function lock_group_sticker(msg, data, target)
     return "For moderators only!"
   end
   local group_sticker_lock = data[tostring(target)]['settings']['sticker']
-  if group_sticker_lock == 'kick' then
+  if group_sticker_lock == 'yes' then
     return 'Sticker protection is already enabled!'
   else
-    data[tostring(target)]['settings']['sticker'] = 'kick'
+    data[tostring(target)]['settings']['sticker'] = 'yes'
     save_data(_config.moderation.data, data)
     return 'Sticker protection has been enabled!'
   end
@@ -318,10 +318,10 @@ local function unlock_group_sticker(msg, data, target)
     return "For moderators only!"
   end
   local group_sticker_lock = data[tostring(target)]['settings']['sticker']
-  if group_sticker_lock == 'ok' then
+  if group_sticker_lock == 'no' then
     return 'Sticker protection is already disabled!'
   else
-    data[tostring(target)]['settings']['sticker'] = 'ok'
+    data[tostring(target)]['settings']['sticker'] = 'no'
     save_data(_config.moderation.data, data)
     return 'Sticker protection has been disabled!'
   end
