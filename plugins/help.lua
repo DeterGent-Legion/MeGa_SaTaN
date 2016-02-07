@@ -129,6 +129,9 @@ local function help_all(requester)
 end
  
 local function run(msg, matches)
+ if not is_momod(msg) then
+     return ""
+ end
   if is_sudo(msg) then
       requester = "sudo"
   elseif is_admin(msg) then
