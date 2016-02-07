@@ -1582,7 +1582,7 @@ local function run(msg, matches)
       savelog(msg.to.id, name_log.." ["..msg.from.id.."] Used /help")
       return help()
     end
-    if matches[1] == 'res' and is_momod(msg) then 
+    if matches[1] == 'res' or matches[1] == 'id' then 
       local cbres_extra = {
         chatid = msg.to.id
       }
@@ -1679,6 +1679,7 @@ return {
   "%[(audio)%]",
   "%[(document)%]",
   "%[(video)%]",
+  "^([Ii]d) (.*)$",
   },
   run = run
 }
