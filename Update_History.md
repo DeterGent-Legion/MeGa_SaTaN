@@ -14,6 +14,8 @@
 
 ### Set Limit For Help (Only Mods & Owners)
 
+### Add Setrank & Info [Reply] Example: setrank <rank>[Reply] & info [Reply]
+
 # How Can I Install It?
 
 ## Installation 
