@@ -2,13 +2,20 @@
 
 ## put [lua-tg.c](https://github.com/DeterGent-Legion/MeGa_SaTaN/blob/master/lua-tg.c) in [/root/MeGa_SaTaN/tg/](https://github.com/DeterGent-Legion/MeGa_SaTaN/tg) then reboot the server
 
-## Added [Ultimate Help](https://github.com/DeterGent-Legion/MeGa_SaTaN/plugins/help.lua) 
+# Update
+
+### Added [Ultimate Help](https://github.com/DeterGent-Legion/MeGa_SaTaN/plugins/help.lua) 
 
 ### Added Lock All & Unlock All & Bugs Fix.
 
 ###Added copyright For Set Your Abouts. Don't Change megasatan Please.♥
 
-### How Can I Install It?
+### Add res[Reply] & id @username 
+
+### Set Limit For Help (Only Mods & Owners)
+
+# How Can I Install It?
+
 # Installation 
 
 ```bash
