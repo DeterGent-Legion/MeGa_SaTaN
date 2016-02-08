@@ -16,8 +16,6 @@
 
 ### Set Limit For Help (Only Mods & Owners)
 
-### Add Setrank & Info [Reply] Example: setrank <rank>[Reply] & info [Reply]
-
 ### Add Helper.lua | If User Send A Command With ! Bot Return Use Without Any Symbols.
 
 # How Can I Install It?
