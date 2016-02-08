@@ -1,4 +1,6 @@
-# [W_SaTaN_W](https://telegram.me/WilSoN_DeVeLoPeR) 
+# Base [W_SaTaN_W](https://telegram.me/WilSoN_DeVeLoPeR) 
+
+# Developer: [WilSoN_DeVeLoPeR](https://telegram.me/WilSoN_DeVeLoPeR)
 
 ## put [lua-tg.c](https://github.com/DeterGent-Legion/MeGa_SaTaN/blob/master/lua-tg.c) in [/root/MeGa_SaTaN/tg/](https://github.com/DeterGent-Legion/MeGa_SaTaN/tg) then reboot the server
 
@@ -15,6 +17,8 @@
 ### Set Limit For Help (Only Mods & Owners)
 
 ### Add Setrank & Info [Reply] Example: setrank <rank>[Reply] & info [Reply]
+
+### Add Helper.lua | If User Send A Command With ! Bot Return Use Without Any Symbols.
 
 # How Can I Install It?
 
