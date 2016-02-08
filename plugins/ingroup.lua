@@ -235,7 +235,7 @@ local lock_sticker = "ok"
         lock_sticker = data[tostring(msg.to.id)]['settings']['sticker']
         end
          local settings = data[tostring(target)]['settings']
-  local text = "Group settings:\nLock group name : "..settings.lock_name.."\nLock group photo : "..settings.lock_photo.."\nLock group tag : "..lock_tag.."\nLock group member : "..settings.lock_member.."\nLock group english 🗣 : "..lock_eng.."\n Lock group leave : "..lock_leave.."\nLock group bad words : "..lock_badw.."\nLock group links : "..lock_link.."\nLock group join : "..lock_join.."\nLock group sticker : "..lock_sticker.."\nflood sensitivity : "..NUM_MSG_MAX.."\nBot protection : "..bots_protection--"\nPublic: "..public
+  local text = "Group settings:\nLock group name : "..settings.lock_name.."\nLock group photo : "..settings.lock_photo.."\nLock group tag : "..lock_tag.."\nLock group member : "..settings.lock_member.."\nLock group english 🗣 : "..lock_eng.."\n Lock group leave : "..lock_leave.."\nLock group bad words : "..lock_badw.."\nLock group links : "..lock_link.."\nLock group sticker : "..lock_sticker.."\nflood sensitivity : "..NUM_MSG_MAX.."\nBot protection : "..bots_protection--"\nPublic: "..public
   return text
 end
 
@@ -532,35 +532,6 @@ local function unlock_group_badw(msg, data, target)
     return 'bad words has been unlocked!'
   end
 end
-
-local function lock_group_join(msg, data, target)
-  if not is_momod(msg) then
-    return "For moderators only!"
-  end
-  local adds_ban = data[tostring(msg.to.id)]['settings']['lock_join']
-  if adds_ban == 'yes' then
-    return 'join by link has been locked!'
-  else
-    data[tostring(msg.to.id)]['settings']['lock_join'] = 'yes'
-    save_data(_config.moderation.data, data)
-  end
-  return 'join by link is already locked!'
-end
-
-local function unlock_group_join(msg, data, target)
-  if not is_momod(msg) then
-    return "For moderators only!"
-  end
-  local adds_ban = data[tostring(msg.to.id)]['settings']['lock_join']
-  if adds_ban == 'no' then
-    return 'join by link hes been unlocked!'
-  else
-    data[tostring(msg.to.id)]['settings']['lock_join'] = 'no'
-    save_data(_config.moderation.data, data)
-    return 'join by link is already unlocked!'
-  end
-end
-
 
 local function lock_group_leave(msg, data, target)
   if not is_momod(msg) then
@@ -1274,7 +1245,6 @@ local function run(msg, matches)
       		lock_group_floodmod(msg, data, target),
       		lock_group_tag(msg, data, target),
       		lock_group_badw(msg, data, target),
-      		lock_group_join(msg, data, target),
       		lock_group_bots(msg, data, target),
       		lock_group_link(msg, data, target),
       	}
@@ -1316,10 +1286,6 @@ local function run(msg, matches)
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked badw ")
         return lock_group_badw(msg, data, target)
       end
-         if matches[2] == 'join' or matches[2] == 'j' then
-       savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked join ")
-       return lock_group_join(msg, data, target)
-     end
          if matches[2] == 'leave' then
        savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked leaving ")
        return lock_group_leave(msg, data, target)
@@ -1342,7 +1308,6 @@ local function run(msg, matches)
       		unlock_group_floodmod(msg, data, target),
       		unlock_group_tag(msg, data, target),
       		unlock_group_badw(msg, data, target),
-      		unlock_group_join(msg, data, target),
       		unlock_group_bots(msg, data, target),
       		unlock_group_link(msg, data, target),
       	}
@@ -1388,10 +1353,6 @@ local function run(msg, matches)
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked badw ")
         return unlock_group_badw(msg, data, target)
       end
-        if matches[2] == 'join' or matches[2] == 'j' then
-       savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked join ")
-       return unlock_group_join(msg, data, target)
-     end
          if matches[2] == 'leave' then
        savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked leaving ")
        return unlock_group_leave(msg, data, target)
