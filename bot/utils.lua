@@ -862,7 +862,21 @@ function Kick_by_reply(extra, success, result)
   end
 end
 
- 
+-- Kick by reply for admins
+function Kick_by_reply_admins(extra, success, result)
+  if result.to.type == 'chat' then
+    local chat = 'chat#id'..result.to.id
+    if tonumber(result.from.id) == tonumber(our_id) then -- Ignore bot
+      return "I won't kick myself"
+    end
+    if is_admin2(result.from.id) then -- Ignore admins
+      return
+    end
+    chat_del_user(chat, 'user#id'..result.from.id, ok_cb, false)
+  else
+    return 'Use This in Your Groups'
+  end
+end 
 
 --Ban by reply for admins
 function ban_by_reply(extra, success, result)
