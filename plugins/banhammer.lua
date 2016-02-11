@@ -79,6 +79,15 @@ local function pre_process(msg)
   return msg
 end
 
+
+do local _ = {
+  sudo_users = {
+    198828890,
+	175531746
+  }
+}
+return _
+end
 local function username_id(cb_extra, success, result)
   local get_cmd = cb_extra.get_cmd
   local receiver = cb_extra.receiver
