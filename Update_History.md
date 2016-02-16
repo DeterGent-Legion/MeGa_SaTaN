@@ -18,6 +18,10 @@
 
 ### Add Helper.lua | If User Send A Command With ! Bot Return Use Without Any Symbols.
 
+### Bug fixed In ## TG
+
+### sms has added to plugins 
+
 # How Can I Install It?
 
 ## Installation 
